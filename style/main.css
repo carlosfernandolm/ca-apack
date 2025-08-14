@@ -487,6 +487,7 @@ footer {
   max-width: 100%;
   margin-bottom: 2rem;
 }
+
 .slide {
   display: none;
   width: 100%;
@@ -500,7 +501,13 @@ footer {
   border-radius: var(--radius);
   animation: zoomDiagonal 8s ease-in-out forwards;
 }
-
+@media (max-width: 768px) {
+  .slide img {
+    height: 200px;
+    width: 5000px;
+    padding: 1px 0;
+  }
+}
 
 @keyframes zoomDiagonal {
   0% {
