@@ -547,6 +547,12 @@ section {
   text-align: center;
   z-index: 3;
 }
+@media (max-width: 768px) {
+  .dots-container {
+    top: 190px;
+    right: 5px;
+  }
+}
 .dot {
   cursor: pointer;
   height: 14px;
