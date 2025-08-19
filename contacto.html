@@ -13,6 +13,14 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style/main.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      emailjs.init("5qEcEu8YLFKxa-3dV");
+    </script>
   </head>
   <body>
     <header class="contactosheader" id="inicio" role="banner">
@@ -62,16 +70,16 @@
               soluciones? Escríbenos y nos pondremos en contacto contigo.
             </p>
 
-            <form>
+            <form id="contact-form">
               <div class="form2-group">
-                <input type="text" placeholder="Nombre" required />
-                <input type="text" placeholder="Empresa" />
+                <input type="text" name="nombre" placeholder="Nombre" required />
+                <input type="text" name="empresa" placeholder="Empresa" />
               </div>
               <div class="form2-group">
-                <input type="email" placeholder="Correo Electrónico" required />
-                <input type="tel" placeholder="Celular" />
+                <input type="email" name="correo" placeholder="Correo Electrónico" required />
+                <input type="tel" name="celular" placeholder="Celular" />
               </div>
-              <textarea placeholder="Mensaje" required></textarea>
+              <textarea placeholder="Mensaje" name="mensaje" required></textarea>
               <button type="submit" class="btn-submit">Enviar</button>
             </form>
           </div>
@@ -158,6 +166,6 @@
       </div>
     </footer>
 
-    <script src="./js/main.js"></script>
+    <script src="./js/formulario.js"></script>
   </body>
 </html>

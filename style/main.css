@@ -590,10 +590,10 @@ section {
 }
 .slideragro {
   display: flex;
-  transition: transform 0.5s var(--transition);
+  transition: transform 0.2s var(--transition);
 }
 .card {
-  flex: 0 0 calc(25% - 10px);
+  flex: 0 0 calc(33% - 10px);
   margin: 0 10px;
   border-radius: var(--radius);
   overflow: hidden;
@@ -648,19 +648,26 @@ section {
 /* Botones slider agro */
 .prevagro,
 .nextagro {
+  cursor: pointer;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  background: rgba(4, 109, 56, 0.55);
-  border: none;
-  color: #fff;
-  font-size: 2rem;
-  padding: 10px;
-  cursor: pointer;
+  padding: 12px;
+  color: #ffffff;
+  font-size: 30px; /* Tamaño inicial (se ajustará en media queries) */
+  font-weight: bold;
   border-radius: 50%;
-  z-index: 10;
-  transition: background var(--transition), box-shadow var(--transition);
+  background: rgba(4, 109, 56, 0.55);
+  z-index: 3;
+  transform: translateY(-50%);
+  border: none;
+  transition: background 0.3s, box-shadow 0.3s;
   box-shadow: 0 2px 8px rgba(4, 109, 56, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px; /* Tamaño fijo inicial */
+  height: 50px;
+  line-height: 1;
 }
 .prevagro:hover,
 .nextagro:hover {
