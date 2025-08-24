@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initFadeSlider(".slider-container", ".slide", ".dot");
 
     /* ---------------- SLIDER 2 (Carrusel: agro) ---------------- */
-    function initCarousel(sliderSelector, cardSelector, prevSelector, nextSelector, interval = 4000) {
+    function initCarousel(sliderSelector, cardSelector, prevSelector, nextSelector, interval = 6000) {
         const slider = document.querySelector(sliderSelector);
         const cards = document.querySelectorAll(cardSelector);
         const prevBtn = document.querySelector(prevSelector);
@@ -108,9 +108,9 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
 
-        setInterval(() => {
-            if (nextBtn) nextBtn.click();
-        }, interval);
+        //setInterval(() => {
+            //if (nextBtn) nextBtn.click();
+        //}, interval);
 
         window.addEventListener("resize", () => {
             visibleCards = getVisibleCards();
@@ -168,3 +168,15 @@ window.addEventListener('scroll', () => {
 });
 
 // ...existing code...
+// Manejo de dots sin inline onclick
+document.addEventListener("DOMContentLoaded", () => {
+  const dotsContainer = document.querySelector(".dots-container");
+  if (dotsContainer) {
+    dotsContainer.addEventListener("click", (e) => {
+      if (e.target.classList.contains("dot")) {
+        const idx = [...dotsContainer.children].indexOf(e.target);
+        goToSlide(idx);
+      }
+    });
+  }
+});
